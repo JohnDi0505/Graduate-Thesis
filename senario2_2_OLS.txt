@@ -1,0 +1,25 @@
+# Senario 2.2 Output:
+Using stepwise linear model with AIC involving microclimatic variables including: temp(temperature),
+rh(relative humidity), solar(solar radiation), elv(elevation), and ndvi(normalized difference vegetation index)
+with respect to all sites surveyed in spring season
+
+Call:
+lm(formula = t_adult ~ temp + ndvi, data = tick_db)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-10.591  -4.597  -0.968   1.266  57.829 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -11.09468    5.66585  -1.958 0.053833 .  
+temp          0.20420    0.05852   3.490 0.000803 ***
+ndvi         18.69971    9.09838   2.055 0.043243 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 9.065 on 77 degrees of freedom
+  (48 observations deleted due to missingness)
+Multiple R-squared:  0.1373,	Adjusted R-squared:  0.1149 
+F-statistic: 6.126 on 2 and 77 DF,  p-value: 0.003398
+

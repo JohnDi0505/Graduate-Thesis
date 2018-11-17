@@ -1,0 +1,25 @@
+# Senario 1 Output:
+Using a stepwise linear model with AIC involving all micromatic & landcover variables across spring and fall seasons
+
+Call:
+lm(formula = t_adult ~ temp + ndvi + mixed_hardwood + ecotone_length, 
+    data = df1)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-11.951  -4.389  -0.442   1.414  54.057 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    -26.91279    7.97189  -3.376  0.00117 ** 
+temp             0.24197    0.05844   4.140 8.99e-05 ***
+ndvi            15.70673    8.86016   1.773  0.08033 .  
+mixed_hardwood  14.77356    5.46358   2.704  0.00847 ** 
+ecotone_length   0.19979    0.08897   2.246  0.02768 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.76 on 75 degrees of freedom
+Multiple R-squared:  0.2154,	Adjusted R-squared:  0.1735 
+F-statistic: 5.146 on 4 and 75 DF,  p-value: 0.001019
+

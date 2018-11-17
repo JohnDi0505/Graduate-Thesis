@@ -1,0 +1,24 @@
+# Senario 2.1 Output:
+Using a stepwise linear model with AIC involving all sites surveyed in spring
+
+Call:
+lm(formula = t_adult ~ dwarf_shrub + pine_forest + ecotone_length, 
+    data = df2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-17.215  -5.677  -2.570   3.595  48.585 
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)   
+(Intercept)      7.5700     2.4587   3.079  0.00396 **
+dwarf_shrub    -81.6083    41.2304  -1.979  0.05547 . 
+pine_forest    -32.1608    14.4813  -2.221  0.03274 * 
+ecotone_length   0.8018     0.3130   2.562  0.01475 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 11.94 on 36 degrees of freedom
+Multiple R-squared:  0.1595,	Adjusted R-squared:  0.08948 
+F-statistic: 2.278 on 3 and 36 DF,  p-value: 0.09615
+
