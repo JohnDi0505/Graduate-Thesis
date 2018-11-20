@@ -1,0 +1,103 @@
+Model selection based on AICc:
+
+        K   AICc Delta_AICc AICcWt Cum.Wt      LL
+model_2 4 346.21       0.00      1      1 -168.59
+model_1 6 582.25     236.03      0      1 -284.55
+model_4 4 585.22     239.00      0      1 -288.34
+model_3 5 896.89     550.67      0      1 -443.19
+********************************************************************************
+
+Summary of model 2:
+
+Call:
+lm(formula = t_adult ~ mixed_hardwood + ecotone_length, data = spr_sites)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-13.836  -6.230  -2.949   3.203  53.614 
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)  
+(Intercept)    -14.5340     8.8859  -1.636   0.1096  
+mixed_hardwood  22.4828     8.5186   2.639   0.0117 *
+ecotone_length   0.4386     0.1877   2.337   0.0244 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 11.57 on 41 degrees of freedom
+Multiple R-squared:  0.1478,	Adjusted R-squared:  0.1062 
+F-statistic: 3.555 on 2 and 41 DF,  p-value: 0.03771
+********************************************************************************
+
+Summary of model 1:
+
+Call:
+lm(formula = t_adult ~ temp + ndvi + mixed_hardwood + ecotone_length, 
+    data = all_sites)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-11.951  -4.389  -0.442   1.414  54.057 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    -26.91279    7.97189  -3.376  0.00117 ** 
+temp             0.24197    0.05844   4.140 8.99e-05 ***
+ndvi            15.70673    8.86016   1.773  0.08033 .  
+mixed_hardwood  14.77356    5.46358   2.704  0.00847 ** 
+ecotone_length   0.19979    0.08897   2.246  0.02768 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.76 on 75 degrees of freedom
+Multiple R-squared:  0.2154,	Adjusted R-squared:  0.1735 
+F-statistic: 5.146 on 4 and 75 DF,  p-value: 0.001019
+********************************************************************************
+
+Summary of model 4:
+
+Call:
+lm(formula = t_adult ~ temp + ndvi, data = all_sites)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-10.591  -4.597  -0.968   1.266  57.829 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -11.09468    5.66585  -1.958 0.053833 .  
+temp          0.20420    0.05852   3.490 0.000803 ***
+ndvi         18.69971    9.09838   2.055 0.043243 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 9.065 on 77 degrees of freedom
+Multiple R-squared:  0.1373,	Adjusted R-squared:  0.1149 
+F-statistic: 6.126 on 2 and 77 DF,  p-value: 0.003398
+********************************************************************************
+
+Summary of model 3:
+
+Call:
+lm(formula = t_adult ~ mixed_hardwood + pine_forest + ecotone_length, 
+    data = tick_db)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-8.910 -3.856 -1.740  1.320 62.127 
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)  
+(Intercept)    -4.66693    4.59040  -1.017   0.3113  
+mixed_hardwood 10.40691    4.48908   2.318   0.0221 *
+pine_forest     8.63630    4.88898   1.766   0.0798 .
+ecotone_length  0.11255    0.06379   1.764   0.0801 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.059 on 123 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.04711,	Adjusted R-squared:  0.02387 
+F-statistic: 2.027 on 3 and 123 DF,  p-value: 0.1136
+
+
